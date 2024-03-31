@@ -1,7 +1,8 @@
 {
 	"name": "workers-redis",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
+	"files": ["dist"],
 	"scripts": {
 		"build": "tsup src/index.ts --minify --external cloudflare:sockets --dts --format esm --clean",
 		"prepublish": "npm run build"
