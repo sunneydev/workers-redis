@@ -1,0 +1,16 @@
+{
+  "name": "workers-redis",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.ts --minify --external cloudflare:sockets --dts --format esm --clean",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240329.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "wrangler": "^3.41.0"
+  }
+}
